@@ -68,28 +68,28 @@ class GlowButton : RelativeLayout, OnTouchListener {
     @SuppressLint("ResourceAsColor")
     private fun parseAttrs(context: Context, attrs: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(
-            attrs, com.sanojpunchihewa.glowbutton.R.styleable.GlowButton
+            attrs, R.styleable.GlowButton2
         )
             ?: return
         for (i in 0 until typedArray.indexCount) {
             val attr = typedArray.getIndex(i)
-            if (attr == com.sanojpunchihewa.glowbutton.R.styleable.GlowButton_buttonColor) {
+            if (attr == R.styleable.GlowButton2_buttonColor) {
                 mBackgroundColor = typedArray.getColor(
-                    attr, com.sanojpunchihewa.glowbutton.R.color.default_background_color
+                    attr, R.color.default_background_color
                 )
-            } else if (attr == com.sanojpunchihewa.glowbutton.R.styleable.GlowButton_glowColor) {
+            } else if (attr == R.styleable.GlowButton2_glowColor) {
                 mGlowColor = typedArray.getColor(
-                    attr, com.sanojpunchihewa.glowbutton.R.color.default_glow_color
+                    attr, R.color.default_glow_color
                 )
-            } else if (attr == com.sanojpunchihewa.glowbutton.R.styleable.GlowButton_cornerRadius) {
+            } else if (attr == R.styleable.GlowButton2_cornerRadius) {
                 mCornerRadius =
-                    typedArray.getDimensionPixelSize(attr, com.sanojpunchihewa.glowbutton.R.dimen.default_corner_radius)
-            } else if (attr == com.sanojpunchihewa.glowbutton.R.styleable.GlowButton_unpressedGlowSize) {
+                    typedArray.getDimensionPixelSize(attr, R.dimen.default_corner_radius)
+            } else if (attr == R.styleable.GlowButton2_unpressedGlowSize) {
                 mUnpressedGlowSize =
-                    typedArray.getDimensionPixelSize(attr, com.sanojpunchihewa.glowbutton.R.dimen.default_unpressed_glow_size)
-            } else if (attr == com.sanojpunchihewa.glowbutton.R.styleable.GlowButton_pressedGlowSize) {
+                    typedArray.getDimensionPixelSize(attr, R.dimen.default_unpressed_glow_size)
+            } else if (attr == R.styleable.GlowButton2_pressedGlowSize) {
                 mPressedGlowSize =
-                    typedArray.getDimensionPixelSize(attr, com.sanojpunchihewa.glowbutton.R.dimen.default_pressed_glow_size)
+                    typedArray.getDimensionPixelSize(attr, R.dimen.default_pressed_glow_size)
             }
         }
         typedArray.recycle()
@@ -105,11 +105,11 @@ class GlowButton : RelativeLayout, OnTouchListener {
     private fun initDefaultValues() {
         val resources = resources ?: return
         mBackgroundColor =
-            resources.getColor(com.sanojpunchihewa.glowbutton.R.color.default_background_color)
-        mGlowColor = resources.getColor(com.sanojpunchihewa.glowbutton.R.color.default_glow_color)
-        mCornerRadius = resources.getDimensionPixelSize(com.sanojpunchihewa.glowbutton.R.dimen.default_corner_radius)
-        mUnpressedGlowSize = resources.getDimensionPixelSize(com.sanojpunchihewa.glowbutton.R.dimen.default_unpressed_glow_size);
-        mPressedGlowSize = resources.getDimensionPixelSize(com.sanojpunchihewa.glowbutton.R.dimen.default_pressed_glow_size);
+            resources.getColor(R.color.default_background_color)
+        mGlowColor = resources.getColor(R.color.default_glow_color)
+        mCornerRadius = resources.getDimensionPixelSize(R.dimen.default_corner_radius)
+        mUnpressedGlowSize = resources.getDimensionPixelSize(R.dimen.default_unpressed_glow_size);
+        mPressedGlowSize = resources.getDimensionPixelSize(R.dimen.default_pressed_glow_size);
     }
 
     override fun setBackgroundColor(backgroundColor: Int) {

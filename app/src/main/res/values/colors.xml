@@ -2,5 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="default_background_color">#8800FF</color>
+    <color name="default_glow_color">#885BFC</color>
+    <dimen name="default_corner_radius">50dp</dimen>
+    <dimen name="default_pressed_glow_size">12dp</dimen>
+    <dimen name="default_unpressed_glow_size">10dp</dimen>
+    <declare-styleable name="GlowButton2">
+        <attr format="color" name="buttonColor"/>
+        <attr format="color" name="glowColor"/>
+        <attr format="dimension" name="unpressedGlowSize"/>
+        <attr format="dimension" name="pressedGlowSize"/>
+        <attr format="dimension" name="cornerRadius"/>
+    </declare-styleable>
 </resources>
